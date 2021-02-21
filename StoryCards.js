@@ -44,6 +44,7 @@ const NO_RESPONSE = 14;
 const NO_STATS = 15;
 const NO_OUTCOME = 19;
 
+var story = CSVToArray(storyData);
 var deck = createDeck();
 var validDeck = createValidDeck();
 var activeCard;
@@ -297,5 +298,36 @@ function getNoOutcome(rowNumber){
 	if(eval(story[rowNumber][NO_OUTCOME]) != undefined){
 		return eval(story[rowNumber][NO_OUTCOME]);
 	}	
+}
+
+function CSVToArray(strData, strDelimiter){
+	strDelimiter = (strDelimiter || ",");
+
+	var objPattern = new RegExp((
+			"(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+			"(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+			"([^\"\\" + strDelimiter + "\\r\\n]*))"
+		), "gi");
+
+	var arrData = [[]];
+
+	var arrMatches = null;
+
+	while (arrMatches = objPattern.exec( strData )){
+		var strMatchedDelimiter = arrMatches[ 1 ];
+
+		if (strMatchedDelimiter.length && (strMatchedDelimiter != strDelimiter)){
+			arrData.push( [] );
+		}
+
+		if (arrMatches[ 2 ]){
+			var strMatchedValue = arrMatches[ 2 ].replace(new RegExp( "\"\"", "g" ),"\"");
+		} else {
+			var strMatchedValue = arrMatches[ 3 ];
+		}
+		arrData[ arrData.length - 1 ].push( strMatchedValue );
+	}
+	arrData.shift();
+	return(arrData);
 }
 
