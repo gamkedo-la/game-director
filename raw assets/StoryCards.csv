@@ -1,4 +1,4 @@
-var storyData = `label,author,conditions,lock,weight,question,yes_answer,yes_response,Morale,Quality,Schedule,Budget,yes_outcome,no_answer,no_response,Morale,Quality,Schedule,Budget,no_outcome
+label,author,conditions,lock,weight,question,yes_answer,yes_response,Morale,Quality,Schedule,Budget,yes_outcome,no_answer,no_response,Morale,Quality,Schedule,Budget,no_outcome
 ,PROGRAMMER,,5,50,We've got a ton of bugs we need to sort through! It's never ending.,Fix em!,I'm on it!,-5,15,-10,,,Who cares?,"I care! Whatever, you're the game director.",,-10,,5,
 ,ARTIST,,5,50,I don't like the direction of our art style. We need to redo it.,Do it.,Thank you! This game is gonna look great!,,10,-10,,,We can't...,Bummer.,,-10,,5,
 ,DESIGNER,,5,50,It's taking too much time to make all these levels. Can we cut back the scale of the game?,Sure,"Cutting content hurts, but it'll make the game better.",5,,5,,,Nope,But it's so much work!,,,,-10,
@@ -8,4 +8,4 @@ var storyData = `label,author,conditions,lock,weight,question,yes_answer,yes_res
 ,PROGRAMMER,programmer_ate_pudding == false;,5,50,I found this pudding in the fridge. I want to eat it. I should it eat it. Can I eat it?,Go for it,So delicious!,5,,,,programmer_ate_pudding = true;,Maybe don't,I guess you're right.,-5,,,,
 ,ARTIST,programmer_ate_pudding == true;,5,50,Did you seriously let the engineer eat my pudding from the fridge!? How could you!?,I'll buy you another,And it better be the same brand of pudding.,5,,,,,Get over it!,Oh! I will have my revenge. Just you wait.,-10,-5,,,
 ,PRODUCER,stats.budget <= 30,5,50,We are extremely overbudget! We need to lay some staff off.,Do it,I hate this part of the job.,,,,,,Never!,I'm sure the team will appreciate it.,,,,,
-,ARTIST,,5,50,How much should we invest in the fidelity of our art.,We need the best graphics.,I agree.,5,10,-5,-5,,Graphics aren't important.,Bummer.,,-10,5,5,`
+,ARTIST,,5,50,How much should we invest in the fidelity of our art.,We need the best graphics.,I agree.,5,10,-5,-5,,Graphics aren't important.,Bummer.,,-10,5,5,
