@@ -1,11 +1,14 @@
 var storyData = `label,author,conditions,lock,weight,question,yes_answer,yes_response,Morale,Quality,Schedule,Budget,yes_outcome,no_answer,no_response,Morale,Quality,Schedule,Budget,no_outcome
-,PROGRAMMER,,5,50,We've got a ton of bugs we need to sort through! It's never ending.,Fix em!,I'm on it!,-5,15,-10,,,Who cares?,"I care! Whatever, you're the game director.",,-10,,5,
-,ARTIST,,5,50,I don't like the direction of our art style. We need to redo it.,Do it.,Thank you! This game is gonna look great!,,10,-10,,,We can't...,Bummer.,,-10,,5,
-,DESIGNER,,5,50,It's taking too much time to make all these levels. Can we cut back the scale of the game?,Sure,"Cutting content hurts, but it'll make the game better.",5,,5,,,Nope,But it's so much work!,,,,-10,
-,SOUND DESIGNER,,5,50,We need a new sound studio to record our SFX. How 'bout it?,Lets do it,Oooohh! My dreams have come true!,,,,-20,,Too expensive,"And once again, sound takes a backseat. You'll regret it!",,,,,20
-,PRODUCER,stats.budget >= 70,5,50,The project is under budget. Should we splurge and do something nice for the team?,Pizza Party!,Woot! Woot!,10,,,-10,,Let's be frugal.,Very good.,-5,,,,5
-,PRODUCER,stats.time >= 70,5,50,The project is ahead of schedule. Should we let the team take some time off?,They've earned it.,"Vacation, here I come!",15,,-10,,,Get back to work!,Rude.,-10,,,5,
-,PROGRAMMER,programmer_ate_pudding == false;,5,50,I found this pudding in the fridge. I want to eat it. I should it eat it. Can I eat it?,Go for it,So delicious!,5,,,,programmer_ate_pudding = true;,Maybe don't,I guess you're right.,-5,,,,
-,ARTIST,programmer_ate_pudding == true;,5,50,Did you seriously let the engineer eat my pudding from the fridge!? How could you!?,I'll buy you another,And it better be the same brand of pudding.,5,,,,,Get over it!,Oh! I will have my revenge. Just you wait.,-10,-5,,,
-,PRODUCER,stats.budget <= 30,5,50,We are extremely overbudget! We need to lay some staff off.,Do it,I hate this part of the job.,,,,,,Never!,I'm sure the team will appreciate it.,,,,,
-,ARTIST,,5,50,How much should we invest in the fidelity of our art.,We need the best graphics.,I agree.,5,10,-5,-5,,Graphics aren't important.,Bummer.,,-10,5,5,`
+,PROGRAMMER,,10,50,We've got a ton of bugs we need to sort through! It's never ending.,Fix em!,I'm on it!,-5,15,-10,,,Who cares?,"I care! Whatever, you're the game director.",,-10,,5,
+,ARTIST,,10,50,I don't like the direction of our art style. We need to redo it.,Do it.,Thank you! This game is gonna look great!,,10,-10,,,We can't...,Bummer.,,-10,,5,
+,DESIGNER,,10,50,It's taking too much time to make all these levels. Can we cut back the scale of the game?,Sure,"Cutting content hurts, but it'll make the game better.",5,,5,,,Nope,But it's so much work!,,,,-10,
+,SOUND DESIGNER,,10,50,We need a new sound studio to record our SFX. How 'bout it?,Lets do it,Oooohh! My dreams have come true!,,,,-20,,Too expensive,"And once again, sound takes a backseat. You'll regret it!",,,,,20
+,PRODUCER,stats.budget >= 70,10,50,The project is under budget. Should we splurge and do something nice for the team?,Pizza Party!,Woot! Woot!,10,,,-10,,Let's be frugal.,Very good.,-5,,,,5
+,PRODUCER,stats.time >= 70,10,50,The project is ahead of schedule. Should we let the team take some time off?,They've earned it.,"Vacation, here I come!",15,,-10,,,Get back to work!,Rude.,-10,,,5,
+,PROGRAMMER,programmer_ate_pudding == false;,10,50,I found this pudding in the fridge. I want to eat it. I should it eat it. Can I eat it?,Go for it,So delicious!,5,,,,programmer_ate_pudding = true;,Maybe don't,I guess you're right.,-5,,,,
+,ARTIST,programmer_ate_pudding == true;,10,50,Did you seriously let the engineer eat my pudding from the fridge!? How could you!?,I'll buy you another,And it better be the same brand of pudding.,5,,,,,Get over it!,Oh! I will have my revenge. Just you wait.,-10,-5,,,
+,PRODUCER,stats.budget <= 30,10,50,We are extremely overbudget! We need to lay some staff off.,Do it,I hate this part of the job.,,,,,,Never!,I'm sure the team will appreciate it.,,,,,
+,ARTIST,,10,50,How much should we invest in the fidelity of our art.,We need the best graphics.,I agree.,5,10,-5,-5,,Graphics aren't important.,Bummer.,,-10,5,5,
+,PROGRAMMER,,10,50,I'm superior to all the other programmers on the team! Wouldn't you agree?,Of course you are,"And by your own admission, I deserve a raise.",-5,,,-5,,Absolutely not,Hmmmm. Well then maybe I should quit.,5,-5,,,
+,DESIGNER,,10,50,The moment-to-moment gameplay is boring. We need more juice in our game.,You're right!,I'll spend a week getting things in tip-top shape.,,5,,-10,,Not now,Ok. I hope players enjoy a boring game.,,-5,,,
+,PRODUCER,,10,50,The engineers are arguing again. Productivity is dropping.,Let them argue,They're all adults. They should be able to sort it out themselves.,-5,,5,,,Sort it out,Ugh. Why am I always having to babysit everyone.,5,,-5,-5,`
