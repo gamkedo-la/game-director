@@ -3,7 +3,8 @@ var assetsToload = ["images/programmer.png",
 					"images/artist.png",
 					"images/designer.png",
 					"images/producer.png",
-					"images/sound_engineer.png"
+					"images/sound_engineer.png",
+					"images/pattern_background.png"
 					];
 
 var assets = {};

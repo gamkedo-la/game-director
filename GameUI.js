@@ -42,15 +42,29 @@ outputText.draw = function(){
 }
 
 var yesChoiceText = createDisplayObject();
+yesChoiceText.rect = {
+	x: cardImage.x,
+	y: cardImage.y + cardImage.height + 75,
+	width: cardImage.width,
+	height: 30,
+}
 yesChoiceText.draw = function(){
 	if(activeCard.active){
-		print("1. " + activeCard.yesAnswer, cardImage.x, cardImage.y + cardImage.height + 80, "black", 20, "Helvetica");
+		rect(cardImage.x, cardImage.y + cardImage.height + 75, cardImage.width, 30, 1, "black");
+		print("  "+ activeCard.yesAnswer, cardImage.x, cardImage.y + cardImage.height + 80, "black", 20, "Helvetica");
 	}
 }
 
 var noChoiceText = createDisplayObject();
+noChoiceText.rect = {
+	x: cardImage.x,
+	y: cardImage.y + cardImage.height + 115,
+	width: cardImage.width,
+	height: 30,
+}
 noChoiceText.draw = function(){
 	if(activeCard.active){
-		print("2. " + activeCard.noAnswer, cardImage.x, cardImage.y + cardImage.height + 120, "black", 20, "Helvetica");
+		rect(cardImage.x, cardImage.y + cardImage.height + 115, cardImage.width, 30, 1, "black");
+		print("  "+activeCard.noAnswer, cardImage.x, cardImage.y + cardImage.height + 120, "black", 20, "Helvetica");
 	}	
 }
