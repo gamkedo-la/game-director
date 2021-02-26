@@ -32,6 +32,12 @@ cardImage.draw = function(){
 		case "SOUND DESIGNER":
 			spr(assets["images/sound_engineer.png"],this.x,this.y)
 			break;
+		case "QA LEAD":
+			spr(assets["images/qa_lead.png"],this.x,this.y)
+			break;
+		case "MASTER CODER":
+			spr(assets["images/master_coder.png"],this.x,this.y)
+			break;
 	}
 }
 

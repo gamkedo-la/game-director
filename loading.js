@@ -4,6 +4,8 @@ var assetsToload = ["images/programmer.png",
 					"images/designer.png",
 					"images/producer.png",
 					"images/sound_engineer.png",
+					"images/qa_lead.png",
+					"images/master_coder.png",
 					"images/pattern_background.png"
 					];
 

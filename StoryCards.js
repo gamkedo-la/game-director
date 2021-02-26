@@ -225,7 +225,12 @@ function getAuthor(rowNumber){
 }
 
 function getConditions(rowNumber){
-	return eval(story[rowNumber][CONDITIONS]);
+	try {
+	    return eval(story[rowNumber][CONDITIONS]);
+	} catch(err) {
+		console.log("js error trying to eval this condition: " + story[rowNumber][CONDITIONS]);
+		return false;
+	}
 }
 
 function getLock(rowNumber){
