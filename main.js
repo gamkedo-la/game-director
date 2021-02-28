@@ -81,14 +81,17 @@ c.addEventListener('mousemove', function(evt) {
 	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
 	    	yesHover = true;
 	    	noHover = false;
+	    	c.style.cursor = "pointer";
 	        //console.log("Hovering Over Option 1");
 	    }else if(isMouseInside(mousePos,noChoiceText.rect)){
 	    	yesHover = false;
 	    	noHover = true;
+	    	c.style.cursor = "pointer";
 	        //console.log("Hovering Over Option 2");
 	    } else{
 	    	yesHover = false;
 	    	noHover = false;
+	    	c.style.cursor = "default";
 	    	//console.log("NO HOVER!");
 	    }
 	}

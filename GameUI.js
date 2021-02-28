@@ -38,6 +38,9 @@ cardImage.draw = function(){
 		case "MASTER CODER":
 			spr(assets["images/master_coder.png"],this.x,this.y)
 			break;
+		case "LEVEL DESIGNER":
+			spr(assets["images/level_designer.png"],this.x,this.y)
+			break;
 	}
 }
 
@@ -48,6 +51,7 @@ outputText.draw = function(){
 }
 
 var yesChoiceText = createDisplayObject();
+yesChoiceText.hoverWidth = 0;
 yesChoiceText.rect = {
 	x: cardImage.x,
 	y: cardImage.y + cardImage.height + 75,
@@ -55,13 +59,34 @@ yesChoiceText.rect = {
 	height: 30,
 }
 yesChoiceText.draw = function(){
+	//If button is being hovered over, start filling it gradually
+	if(yesHover){
+		if(yesChoiceText.hoverWidth < cardImage.width){
+			yesChoiceText.hoverWidth += 16;
+		} else{
+			yesChoiceText.hoverWidth = cardImage.width;
+		}
+		
+	} else{
+		yesChoiceText.hoverWidth = 0;
+	}
+
 	if(activeCard.active){
 		rect(cardImage.x, cardImage.y + cardImage.height + 75, cardImage.width, 30, 1, "black");
-		print("  "+ activeCard.yesAnswer, cardImage.x, cardImage.y + cardImage.height + 80, "black", 20, "Helvetica");
+		rectFill(cardImage.x, cardImage.y + cardImage.height + 75, yesChoiceText.hoverWidth, 30, 1, "black");
+		if(yesHover){
+			ctx.fillStyle = "white";
+			print("  "+ activeCard.yesAnswer, cardImage.x, cardImage.y + cardImage.height + 80, "white", 20, "Helvetica");	
+		} else{
+			ctx.fillStyle = "black";
+			print("  "+ activeCard.yesAnswer, cardImage.x, cardImage.y + cardImage.height + 80, "black", 20, "Helvetica");	
+		}
+		
 	}
 }
 
 var noChoiceText = createDisplayObject();
+noChoiceText.hoverWidth = 0;
 noChoiceText.rect = {
 	x: cardImage.x,
 	y: cardImage.y + cardImage.height + 115,
@@ -69,8 +94,28 @@ noChoiceText.rect = {
 	height: 30,
 }
 noChoiceText.draw = function(){
+	//If button is being hovered over, start filling it gradually
+	if(noHover){
+		if(noChoiceText.hoverWidth < cardImage.width){
+			noChoiceText.hoverWidth += 16;
+		} else{
+			noChoiceText.hoverWidth = cardImage.width;
+		}
+		
+	} else{
+		noChoiceText.hoverWidth = 0;
+	}
+
 	if(activeCard.active){
 		rect(cardImage.x, cardImage.y + cardImage.height + 115, cardImage.width, 30, 1, "black");
-		print("  "+activeCard.noAnswer, cardImage.x, cardImage.y + cardImage.height + 120, "black", 20, "Helvetica");
+		rectFill(cardImage.x, cardImage.y + cardImage.height + 115, noChoiceText.hoverWidth, 30, 1, "black");
+		if(noHover){
+			ctx.fillStyle = "white";
+			print("  "+activeCard.noAnswer, cardImage.x, cardImage.y + cardImage.height + 120, "white", 20, "Helvetica");
+		} else{
+			ctx.fillStyle = "black";
+			print("  "+activeCard.noAnswer, cardImage.x, cardImage.y + cardImage.height + 120, "black", 20, "Helvetica");
+		}
+		
 	}	
 }
