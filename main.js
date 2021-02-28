@@ -4,8 +4,16 @@ var ctx = c.getContext('2d');
 var canvasWidth = c.width / PIXEL_RATIO;
 var canvasHeight = c.height / PIXEL_RATIO;
 
+// ================= DECLARE VARIABLES HERE ======================
+var objectsToUpdate = [];
+
 const StatsX = 64;
 const StatsY = 32;
+
+var yesHover = false;
+var noHover = false;
+
+// ================= INIT FUNCTIONS ======================
 window.onload = function(){
 	window.addEventListener('keydown',keyDown,true);
 }
@@ -64,13 +72,29 @@ c.addEventListener('click', function(evt) {
      
 }, false);
 
+//Check to see if the mouse is hovering over any buttons
+c.addEventListener('mousemove', function(evt) {
 
+	if(activeCard.active){
+		var mousePos = getMousePos(c, evt);
 
+	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
+	    	yesHover = true;
+	    	noHover = false;
+	        //console.log("Hovering Over Option 1");
+	    }else if(isMouseInside(mousePos,noChoiceText.rect)){
+	    	yesHover = false;
+	    	noHover = true;
+	        //console.log("Hovering Over Option 2");
+	    } else{
+	    	yesHover = false;
+	    	noHover = false;
+	    	//console.log("NO HOVER!");
+	    }
+	}
+});
 
-flipCard();
-
-// ================= DECLARE VARIABLES HERE ======================
-var objectsToUpdate = [];
+flipCard(); // Flip the first story card
 
 
 // ================= RUN THE GAMELOOP ======================
