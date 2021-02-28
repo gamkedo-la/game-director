@@ -12,6 +12,12 @@ stats.budget = 50;
 
 //Step 3. Declare any variables you plan to use in your story below
 var programmer_ate_pudding = false;
+var qa_intense = false;
+var qa_gaveup = false;
+var marketing_offered_interview = false;
+var scope_has_shrunk = false;
+var programmer_has_overwritten_truth = false;
+var purchased_backup = false;
 
 // =============================================================================
 
