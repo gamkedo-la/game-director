@@ -18,6 +18,16 @@ var marketing_offered_interview = false;
 var scope_has_shrunk = false;
 var programmer_has_overwritten_truth = false;
 var purchased_backup = false;
+var programmer_meeting_called = false;
+var marketing_has_budget = false;
+var intern_help_art = false;
+var intern_help_programmer = false;
+var training_program_starting = false;
+var advanced_trailer_bought = false;
+var video_channel_created = false;
+var suggestion_box_active = false;
+var create_ost = false;
+var advanced_trailer_not_bought = false;
 
 // =============================================================================
 
