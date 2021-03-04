@@ -41,6 +41,15 @@ cardImage.draw = function(){
 		case "LEVEL DESIGNER":
 			spr(assets["images/level_designer.png"],this.x,this.y)
 			break;
+		case "HUMAN RESOURCES":
+			spr(assets["images/human_resources.png"],this.x,this.y)
+			break;
+		case "INTERN":
+			spr(assets["images/intern.png"],this.x,this.y)
+			break;
+		case "VETERAN":
+			spr(assets["images/veteran.png"],this.x,this.y)
+			break;
 	}
 }
 

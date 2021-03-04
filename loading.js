@@ -7,7 +7,10 @@ var assetsToload = ["images/programmer.png",
 					"images/qa_lead.png",
 					"images/master_coder.png",
 					"images/pattern_background.png",
-					"images/level_designer.png"
+					"images/level_designer.png",
+					"images/human_resources.png",
+					"images/intern.png",
+					"images/veteran.png"
 					];
 
 var assets = {};
