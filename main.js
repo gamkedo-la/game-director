@@ -13,6 +13,8 @@ const StatsY = 32;
 var yesHover = false;
 var noHover = false;
 
+var gameState = "splash";
+
 // ================= INIT FUNCTIONS ======================
 window.onload = function(){
 	window.addEventListener('keydown',keyDown,true);
@@ -54,6 +56,9 @@ function isMouseInside(pos, rect){
 
 //Binding the click event on the canvas
 c.addEventListener('click', function(evt) {
+	if(gameState == "splash"){
+		gameState = "game";
+	}
 
 	if(activeCard.active){
 		var mousePos = getMousePos(c, evt);
@@ -99,7 +104,6 @@ c.addEventListener('mousemove', function(evt) {
 
 flipCard(); // Flip the first story card
 
-
 // ================= RUN THE GAMELOOP ======================
 setInterval(gameloop,16);
 
@@ -116,10 +120,15 @@ function update(){
 
 function draw(){
 	cls(); // clear screen
-	spr(assets["images/pattern_background.png"],0,0);
-	for (var i = 0; i < objectsToUpdate.length; i++) {
-		objectsToUpdate[i].draw();
+	if(gameState == "splash"){
+		spr(assets["images/splash_screen.png"],0,0);
+	} else{
+		spr(assets["images/pattern_background.png"],0,0);
+		for (var i = 0; i < objectsToUpdate.length; i++) {
+			objectsToUpdate[i].draw();
+		}
 	}
+	
 }	
 
 

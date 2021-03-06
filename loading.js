@@ -10,7 +10,8 @@ var assetsToload = ["images/programmer.png",
 					"images/level_designer.png",
 					"images/human_resources.png",
 					"images/intern.png",
-					"images/veteran.png"
+					"images/veteran.png",
+					"images/splash_screen.png"
 					];
 
 var assets = {};
