@@ -56,6 +56,7 @@ function isMouseInside(pos, rect){
 
 //Binding the click event on the canvas
 c.addEventListener('click', function(evt) {
+
 	if(gameState == "splash"){
 		gameState = "game";
 	}
@@ -64,9 +65,11 @@ c.addEventListener('click', function(evt) {
 		var mousePos = getMousePos(c, evt);
 
 	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
+			buttonClickSFX.play();
 	        selectYes();
 			outputText.text = activeCard.yesResponse;
 	    }else if(isMouseInside(mousePos,noChoiceText.rect)){
+	    	buttonClickSFX.play();
 	        selectNo();
 			outputText.text = activeCard.noResponse;
 	    }  

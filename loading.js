@@ -11,10 +11,13 @@ var assetsToload = ["images/programmer.png",
 					"images/human_resources.png",
 					"images/intern.png",
 					"images/veteran.png",
-					"images/splash_screen.png"
+					"images/splash_screen.png",
+					"images/ceo.png"
 					];
 
 var assets = {};
+
+var buttonClickSFX = new Audio("audio/select.wav");
 
 assetsToload.forEach(function(source){
 	var img = new Image();
