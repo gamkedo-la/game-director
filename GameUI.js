@@ -50,6 +50,9 @@ cardImage.draw = function(){
 		case "VETERAN":
 			spr(assets["images/veteran.png"],this.x,this.y)
 			break;
+		case "CEO":
+			spr(assets["images/ceo.png"],this.x,this.y)
+			break;
 	}
 }
 
