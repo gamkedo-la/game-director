@@ -28,6 +28,14 @@ var video_channel_created = false;
 var suggestion_box_active = false;
 var create_ost = false;
 var advanced_trailer_not_bought = false;
+var pets_allowed = false;
+var big_bug_missed = false;
+var team_meeting_scheduled = false;
+var intern_idea_pitched = false;
+var intern_idea_active = false;
+var find_the_leak = false;
+var hit_piece_interview = false;
+var has_been_bought_minor = false;
 
 // =============================================================================
 
