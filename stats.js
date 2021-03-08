@@ -7,11 +7,11 @@ statBar1.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[0] != 0 ){
-			circFill(StatsX+136, StatsY+4,4,"white");
+			circFill(StatsX+136, StatsY+4,6,"#5ab9a8");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[0] != 0 ){
-			circFill(StatsX+136, StatsY+4,4,"white");
+			circFill(StatsX+136, StatsY+4,6,"#5ab9a8");
 		}
 	}
 }
@@ -24,11 +24,11 @@ statBar2.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[1] != 0 ){
-			circFill(StatsX+136, (StatsY*3) + 4, 4, "white");
+			circFill(StatsX+136, (StatsY*3) + 4, 6, "#5ab9a8");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[1] != 0 ){
-			circFill(StatsX+136, (StatsY*3) + 4, 4, "white");
+			circFill(StatsX+136, (StatsY*3) + 4, 6, "#5ab9a8");
 		}
 	}
 	
@@ -42,11 +42,11 @@ statBar3.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[2] != 0 ){
-			circFill(StatsX+136, (StatsY*5) + 4, 4, "white");
+			circFill(StatsX+136, (StatsY*5) + 4, 6, "#5ab9a8");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[2] != 0 ){
-			circFill(StatsX+136, (StatsY*5) + 4, 4, "white");
+			circFill(StatsX+136, (StatsY*5) + 4, 6, "#5ab9a8");
 		}
 	}
 	
@@ -60,11 +60,11 @@ statBar4.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[3] != 0 ){
-			circFill(StatsX+136, (StatsY*7) + 4, 4, "white");
+			circFill(StatsX+136, (StatsY*7) + 4, 6, "#5ab9a8");
 		}
 	} else if(noHover){
 		if(activeCard.noStats[3] != 0 ){
-			circFill(StatsX+136, (StatsY*7) + 4, 4, "white");
+			circFill(StatsX+136, (StatsY*7) + 4, 6, "#5ab9a8");
 		}
 	}
 	

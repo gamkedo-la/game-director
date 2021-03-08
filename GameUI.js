@@ -84,8 +84,9 @@ yesChoiceText.draw = function(){
 	}
 
 	if(activeCard.active){
-		rect(cardImage.x, cardImage.y + cardImage.height + 75, cardImage.width, 30, 1, "black");
-		rectFill(cardImage.x, cardImage.y + cardImage.height + 75, yesChoiceText.hoverWidth, 30, 1, "black");
+		ctx.fillStyle = "#5ab9a8";
+		rect(cardImage.x, cardImage.y + cardImage.height + 75, cardImage.width, 30, 1, "#5ab9a8");
+		rectFill(cardImage.x, cardImage.y + cardImage.height + 75, yesChoiceText.hoverWidth, 30, 1, "#5ab9a8");
 		if(yesHover){
 			ctx.fillStyle = "white";
 			print("  "+ activeCard.yesAnswer, cardImage.x, cardImage.y + cardImage.height + 80, "white", 20, "Helvetica");	
@@ -119,8 +120,9 @@ noChoiceText.draw = function(){
 	}
 
 	if(activeCard.active){
-		rect(cardImage.x, cardImage.y + cardImage.height + 115, cardImage.width, 30, 1, "black");
-		rectFill(cardImage.x, cardImage.y + cardImage.height + 115, noChoiceText.hoverWidth, 30, 1, "black");
+		ctx.fillStyle = "#5ab9a8";
+		rect(cardImage.x, cardImage.y + cardImage.height + 115, cardImage.width, 30, 1, "#5ab9a8");
+		rectFill(cardImage.x, cardImage.y + cardImage.height + 115, noChoiceText.hoverWidth, 30, 1, "#5ab9a8");
 		if(noHover){
 			ctx.fillStyle = "white";
 			print("  "+activeCard.noAnswer, cardImage.x, cardImage.y + cardImage.height + 120, "white", 20, "Helvetica");
