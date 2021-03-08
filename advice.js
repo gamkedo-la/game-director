@@ -14,6 +14,8 @@ choiceHint.draw = function(){
 
 	rectFill(x,y,w,h,"rgba(255,255,255,1)");
 	
+    spr(assets["images/advisor.png"],x+40,y-160)
+
     let advice = "";
     
     if ((yesHover && activeCard.yesStats[0]) ||
