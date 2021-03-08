@@ -10,9 +10,10 @@ var PIXEL_RATIO = (function () {
     return dpr / bsr;
 })();
 
+var canvas; // global so we can measure the width and height in gui routines
 createCanvas = function(w, h, ratio) {
     if (!ratio) { ratio = PIXEL_RATIO; }
-    var canvas = document.createElement("canvas");
+    canvas = document.createElement("canvas");
     canvas.width = w * ratio;
     canvas.height = h * ratio;
     canvas.style.width = w + "px";
