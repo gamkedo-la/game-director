@@ -125,11 +125,15 @@ function draw(){
 	cls(); // clear screen
 	if(gameState == "splash"){
 		spr(assets["images/splash_screen.png"],0,0);
-	} else{
+	} else if(gameState == "game"){
 		spr(assets["images/pattern_background.png"],0,0);
 		for (var i = 0; i < objectsToUpdate.length; i++) {
 			objectsToUpdate[i].draw();
 		}
+	} 
+
+	else if(gameState == "game over"){
+		spr(assets["images/splash_screen.png"],0,0);
 	}
 	
 }	
