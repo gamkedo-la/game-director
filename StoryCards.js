@@ -36,6 +36,18 @@ var intern_idea_active = false;
 var find_the_leak = false;
 var hit_piece_interview = false;
 var has_been_bought_minor = false;
+var localization_complete = false;
+var active_multiplayer = false;
+var kaizen_implemented = false;
+var untested_code_prod_truth = false;
+var untested_code_prod_lie = false;
+var fetch_programmer = false;
+var intern_punishment = false;
+var gameplay_changed = false;
+var gameplay_broken = false;
+var vr_available = false;
+
+
 
 // =============================================================================
 
