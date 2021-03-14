@@ -59,6 +59,12 @@ c.addEventListener('click', function(evt) {
 
 	if(gameState == "splash"){
 		gameState = "game";
+	} else if(gameState == "game over"){
+		stats.morale = 50; //rename to match what's in stat data
+		stats.quality = 50;
+		stats.time = 50;
+		stats.budget = 50;
+		gameState = "game";
 	}
 
 	if(activeCard.active){
@@ -133,7 +139,9 @@ function draw(){
 	} 
 
 	else if(gameState == "game over"){
-		spr(assets["images/splash_screen.png"],0,0);
+		//spr(assets["images/splash_screen.png"],0,0);
+		ctx.fillStyle = "white";
+		print("YOU'RE GAME HAS BEEN CANCELLED...",256,160,512,"white",64);
 	}
 	
 }	
