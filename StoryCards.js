@@ -1,7 +1,7 @@
 //==== STORY SETUP ==============================================================
 
 // Step 1. Rename the statData to the stats you want represented in the game
-var statData = [["ENERGY",50],["QUALITY",50],["TIME",50],["BUDGET",50]]; // NEEDED
+var statData = [["MORALE",50],["QUALITY",50],["TIME",50],["BUDGET",50]]; // NEEDED
 
 // Step 2. Rename the stats object to match statData names. You can reference these stats by stats.name in the editor
 var stats = {};
@@ -46,6 +46,10 @@ var intern_punishment = false;
 var gameplay_changed = false;
 var gameplay_broken = false;
 var vr_available = false;
+var artistlove = 0;
+var artist_ask_date = false;
+var breakup_initiated = false;
+var relationship_approved = false;
 
 
 
