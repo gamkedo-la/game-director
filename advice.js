@@ -12,9 +12,11 @@ choiceHint.draw = function(){
     let x = 780; //canvas.width - w; 
     let y = 585; //canvas.height - h; 
 
-	rectFill(x,y,w,h,"rgba(255,255,255,1)");
+	//rectFill(x,y,w,h,"rgba(255,255,255,1)");
 	
-    spr(assets["images/advisor.png"],x+40,y-160)
+    spr(assets["images/advisor_two.png"],x+40,y-160);
+    rect(x,y,w,h,6,"#5ab9a8");
+    rectFill(x,y,w,h,"rgba(255,255,255,1)");
 
     let advice = "";
     
