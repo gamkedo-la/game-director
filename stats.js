@@ -11,7 +11,7 @@ statBar1.draw = function(){
 	rectFill(StatsX,0,160,240,"black");
 	print("MORALE", StatsX, StatsY - 50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY,128,16,4,"white");
-	rectFill(StatsX,StatsY,128 * statPercent(stats.energy),16,"white");
+	rectFill(StatsX,StatsY,128 * statPercent(stats.morale),16,"white");
 
 	if(yesHover){
 		if(activeCard.yesStats[0] != 0 ){

@@ -5,7 +5,7 @@ var statData = [["ENERGY",50],["QUALITY",50],["TIME",50],["BUDGET",50]]; // NEED
 
 // Step 2. Rename the stats object to match statData names. You can reference these stats by stats.name in the editor
 var stats = {};
-stats.energy = 50; //rename to match what's in stat data
+stats.morale = 50; //rename to match what's in stat data
 stats.quality = 50;
 stats.time = 50;
 stats.budget = 50;
