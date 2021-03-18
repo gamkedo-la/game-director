@@ -72,12 +72,12 @@ c.addEventListener('click', function(evt) {
 
 	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
 			buttonClickSFX.play();
-	        selectYes();
 			outputText.text = activeCard.yesResponse;
-	    }else if(isMouseInside(mousePos,noChoiceText.rect)){
+	        selectYes();
+	    } else if(isMouseInside(mousePos,noChoiceText.rect)){
 	    	buttonClickSFX.play();
+	    	outputText.text = activeCard.noResponse;
 	        selectNo();
-			outputText.text = activeCard.noResponse;
 	    }  
 	} else{
 		flipCard();

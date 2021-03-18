@@ -50,6 +50,11 @@ var artistlove = 0;
 var artist_ask_date = false;
 var breakup_initiated = false;
 var relationship_approved = false;
+var internmissing = 0;
+var sounddesignhobby = 0;
+var ismining = false;
+var double_mine = false;
+var hrtalent = 0;
 
 
 
@@ -189,6 +194,7 @@ function goto(label){
 
 	if(gotoCard){
 		setActiveCard(gotoCard.id);
+		outputText.text = activeCard.question;
 	}
 }
 
