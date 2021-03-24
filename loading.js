@@ -19,7 +19,8 @@ var assetsToload = ["images/programmer.png",
 
 var assets = {};
 
-var buttonClickSFX = new Audio("audio/select.wav");
+var buttonClickSFX = new soundEffectClass("audio/select.wav", 0.5);
+var music = new musicClass("audio/MusicWeDevTo.mp3", 82.5, 0.75);
 
 assetsToload.forEach(function(source){
 	var img = new Image();

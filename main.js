@@ -59,6 +59,7 @@ c.addEventListener('click', function(evt) {
 
 	if(gameState == "splash"){
 		gameState = "game";
+		music.play();
 	} else if(gameState == "game over"){
 		stats.morale = 50; //rename to match what's in stat data
 		stats.quality = 50;
@@ -125,6 +126,7 @@ function update(){
 	for (var i = 0; i < objectsToUpdate.length; i++) {
 		objectsToUpdate[i].update();
 	}
+	music.update();
 }
 
 function draw(){
