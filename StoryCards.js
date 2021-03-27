@@ -55,6 +55,7 @@ var sounddesignhobby = 0;
 var ismining = false;
 var double_mine = false;
 var hrtalent = 0;
+var qafan = 0;
 
 
 
