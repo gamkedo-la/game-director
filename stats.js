@@ -8,18 +8,18 @@ function statPercent(val) {
 
 var statBar1 = createDisplayObject();
 statBar1.draw = function(){
-	rectFill(StatsX,0,160,240,"black");
+	rectFill(StatsX-20,0,180,260,"#5AB9A8");
 	print("MORALE", StatsX, StatsY - 50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY,128,16,4,"white");
 	rectFill(StatsX,StatsY,128 * statPercent(stats.morale),16,"white");
 
 	if(yesHover){
 		if(activeCard.yesStats[0] != 0 ){
-			circFill(StatsX+136, StatsY+4,6,"#5ab9a8");
+			circFill(StatsX+136, StatsY+4,6,"#fff");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[0] != 0 ){
-			circFill(StatsX+136, StatsY+4,6,"#5ab9a8");
+			circFill(StatsX+136, StatsY+4,6,"#fff");
 		}
 	}
 }
@@ -32,11 +32,11 @@ statBar2.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[1] != 0 ){
-			circFill(StatsX+136, (StatsY*3) + 4, 6, "#5ab9a8");
+			circFill(StatsX+136, (StatsY*3) + 4, 6, "#fff");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[1] != 0 ){
-			circFill(StatsX+136, (StatsY*3) + 4, 6, "#5ab9a8");
+			circFill(StatsX+136, (StatsY*3) + 4, 6, "#fff");
 		}
 	}
 	
@@ -50,11 +50,11 @@ statBar3.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[2] != 0 ){
-			circFill(StatsX+136, (StatsY*5) + 4, 6, "#5ab9a8");
+			circFill(StatsX+136, (StatsY*5) + 4, 6, "#fff");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[2] != 0 ){
-			circFill(StatsX+136, (StatsY*5) + 4, 6, "#5ab9a8");
+			circFill(StatsX+136, (StatsY*5) + 4, 6, "#fff");
 		}
 	}
 	
@@ -68,11 +68,11 @@ statBar4.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[3] != 0 ){
-			circFill(StatsX+136, (StatsY*7) + 4, 6, "#5ab9a8");
+			circFill(StatsX+136, (StatsY*7) + 4, 6, "#fff");
 		}
 	} else if(noHover){
 		if(activeCard.noStats[3] != 0 ){
-			circFill(StatsX+136, (StatsY*7) + 4, 6, "#5ab9a8");
+			circFill(StatsX+136, (StatsY*7) + 4, 6, "#fff");
 		}
 	}
 	
