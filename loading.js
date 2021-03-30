@@ -14,7 +14,8 @@ var assetsToload = ["images/programmer.png",
 					"images/splash_screen.png",
 					"images/ceo.png",
 					"images/advisor.png",
-					"images/advisor_two.png"
+					"images/advisor_two.png",
+                    "images/back_of_card.png",
 					];
 
 var assets = {};
