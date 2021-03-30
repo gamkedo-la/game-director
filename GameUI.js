@@ -51,6 +51,9 @@ cardImage.flipCard = function(img) {
         if (!this.flipCardPrevImg) this.flipCardPrevImg = assets["images/back_of_card.png"];
         this.flipCardImg = img;
         this.flipCardStarted = now;
+        // don't blink during anim since the circles would be in the wrong place
+        this.nextBlinkTime = now + this.flipCardTimespan+Math.random()*2000;
+        this.blinkUntil = now-1;
     }
 
     var w = 0;
