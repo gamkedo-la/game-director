@@ -133,6 +133,9 @@ cardImage.draw = function(){
 		case "MARKETING":
 			this.flipCard(assets["images/marketing.png"])
 			break;
+		case "INTERVIEWER":
+			this.flipCard(assets["images/interviewer.png"])
+			break;
         default:
             console.log("MISSING CARD: " +activeCard.author);
             break;
