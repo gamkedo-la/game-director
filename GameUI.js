@@ -130,6 +130,9 @@ cardImage.draw = function(){
 			this.flipCard(assets["images/ceo.png"])
             this.maybeBlink(180,160,240,160);
 			break;
+		case "MARKETING":
+			this.flipCard(assets["images/marketing.png"])
+			break;
         default:
             console.log("MISSING CARD: " +activeCard.author);
             break;
