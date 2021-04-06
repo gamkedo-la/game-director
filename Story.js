@@ -298,5 +298,18 @@ qabuild,QA LEAD,,100,0,I took a couple days off. I got caught up on sleep and I 
 ,CEO,,200,50,I need to be able to trust my Game Directors. Can I trust you?,I wouldn't...,Your honesty is why I trust you.,,,,15,,You can trust me.,And I trust you'll deliver this game with high review scores.,,,-15,,,Gabriel
 ,CEO,,200,50,The board of directors are breathing down my neck to release this game.,How's their breath?,A combination of mint and green apple. Quite pleasant actually.,,,,,,No pressure.,The weight of the world is on this studios shoulders.,,,,,,Gabriel
 ,LEVEL DESIGNER,,200,50,One of the junior designers isn't delivering quality work.,Then teach them to...,I suppose it's my responsibility.,,,-20,-15,,Cut 'em loose.,Wow. That's... ice cold.,,,20,15,,Gabriel`;
+/*
+ , CEO, stats.time = 99,0, 10000, We're Preparing to ship the game. Can't wait for this moment. , Yay!!,Can't believe we pulled through!,,,,, "gameState = ""game win""", Can't believe we pulled through!,,,,,,"gameState = ""game win""",V
+, CEO, stats.morale = 99, 0, 10000, We completed all levels and polished all assets and features.There'sno major bug I suppose. We're releasing the game.! , Yay! ?,,,,,, "gameState = ""game win""", Phew! finally.,I want it this nightmare to end,,,,,"gameState = ""game win""",V
+, CEO, stats.quality = 95, 0, 10000, The quality of the game is good enough.We have received so many positive reviews., I'm so happy! ,Wheew! this is amazing.Can't believe we did it .,,,,, "gameState = ""game win""",  Maybe next time we'll do a better job!,,,,,,"gameState = ""game win""",V
+, INTERVIEWER,, 200, 50, Do you have any comments more about the development?, Well it was amazing and difficult at the same time!, But we all made it through., Everyone was amazing, there were problems but we all made it. ,,,, -20,, Unbelieveable! the game was no good!, Meh! I have no special comment. .,,,, -20,,V
+, PRODUCER,, 200, 50, This is an amazing piece of heart you made. Now I can profit a lot. ,We hope we can work again together.,,20,,,,,Piece of art you mean! yeaah!, You're taking all the profit. stingy!, -20,,,,,V
+, QA LEAD,, 200, 50, " playtesting, debugging! Man release time is the worst time.", Let's keep pushing at playtesting!! , 5,,,,, "This game is fun, I love it.!, !...", My! I'm about to faint! !! ,Is this game fun? I no longer know, -5,,,,V
+, LEVEL DESIGNER,, 200, 50, Do you think I could present our game at E4  in front evryone?, You got it. I wish you the best.! , "Go for it. you can do it., 20,,,,, Really? not sure ask the producer. , Nah! director or producer should do it.,-10,,,,,V
+, MASTER CODER,, 200, 50, Do you think I should I become retired??, No! Games are too fun to quit., I suppose when you're too old?,20,,,,, Right now! ,After this project is finished!,-20,,,,,V
+, PROGRAMMER,, 200, 50, Z or Y ?, Z, I the game working right as we planned it to be?...,,,,,, Y, Yeah everything's fine! there's just some bugs!.,Yes but We need to change a few things,,,,, It's a mess man!, No way! we lost some changes so we have to redo post-development,,,,, V
+, CEO,, 300, 50, I need to have more faith in my Game Marketer. Can I ?, Yes..., Your principle is what I love about you.,,,, 15,, Leave it to fate., No you can't trust anyone.,,, -5,,,V
+, PRODUCER,, 300, 50, The producers are breaking necks to release this game.,That's awesome! ,I'm sure you guys can make it,10,,,,,, No pressure.,-5,,,,,V`;
+*/
 
 

@@ -56,8 +56,7 @@ var ismining = false;
 var double_mine = false;
 var hrtalent = 0;
 var qafan = 0;
-
-
+var game_shipping = false;
 
 // =============================================================================
 

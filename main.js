@@ -150,7 +150,14 @@ function draw(){
 		//spr(assets["images/splash_screen.png"],0,0);
 		ctx.fillStyle = "white";
 		print("YOU'RE GAME HAS BEEN CANCELLED...",256,160,512,"white",64);
-	}
+    }
+
+    else if (gameState == "game win") {
+        //spr(assets["images/splash_screen.png"],0,0);
+        ctx.fillStyle = "blue";
+        ctx.fillRect(canvasWidth / 2, canvasHeight / 265, 160, 512);
+        print("YOU'RE GAME HAS BEEN CANCELLED...", 256, 160, 512, "white", 64);
+    }
 	
 }	
 
