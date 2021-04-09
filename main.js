@@ -135,10 +135,51 @@ function update(){
 	music.update();
 }
 
+var spashScreenFrameCount = 0;
+var splashOffset = 800;
+var splashSize = 520;
+var splashSpeed = 0.001;
+
+function drawSpashScreen() {
+    spashScreenFrameCount++;
+    var now = performance.now(); // ms
+    spr(assets["images/splash_screen.png"],0,0);
+    
+    spr(assets["images/programmer.png"],210,
+        splashOffset+Math.sin(now*splashSpeed)*splashSize);
+    spr(assets["images/artist.png"],240,
+    splashOffset+Math.sin(now*splashSpeed*0.99+4444)*splashSize);
+    spr(assets["images/designer.png"],270,
+    splashOffset+Math.sin(now*splashSpeed*1.01+1234)*splashSize);
+    spr(assets["images/producer.png"],300,
+    splashOffset+Math.sin(now*splashSpeed*1.02+7582)*splashSize);
+    spr(assets["images/sound_engineer.png"],330,
+    splashOffset+Math.sin(now*splashSpeed*0.993+1759)*splashSize);
+    spr(assets["images/qa_lead.png"],360,
+    splashOffset+Math.sin(now*splashSpeed*1.002+7492)*splashSize);
+    spr(assets["images/master_coder.png"],390,
+    splashOffset+Math.sin(now*splashSpeed*0.97+9232)*splashSize);
+    spr(assets["images/level_designer.png"],420,
+    splashOffset+Math.sin(now*splashSpeed*1.04+2345)*splashSize);
+    spr(assets["images/human_resources.png"],450,
+    splashOffset+Math.sin(now*splashSpeed*0.999+1024)*splashSize);
+    spr(assets["images/intern.png"],480,
+    splashOffset+Math.sin(now*splashSpeed*1.03+8500)*splashSize);
+    spr(assets["images/veteran.png"],510,
+    splashOffset+Math.sin(now*splashSpeed*1.01+5973)*splashSize);
+    spr(assets["images/interviewer.png"],540,
+    splashOffset+Math.sin(now*splashSpeed*0.97+2053)*splashSize);
+    spr(assets["images/marketing.png"],570,
+    splashOffset+Math.sin(now*splashSpeed*0.995+4654)*splashSize);
+    spr(assets["images/ceo.png"],600,
+    splashOffset+Math.sin(now*splashSpeed*0.933+6789)*splashSize);
+
+}
+
 function draw(){
 	cls(); // clear screen
 	if(gameState == "splash"){
-		spr(assets["images/splash_screen.png"],0,0);
+		drawSpashScreen();
 	} else if(gameState == "game"){
 		spr(assets["images/pattern_background.png"],0,0);
 		for (var i = 0; i < objectsToUpdate.length; i++) {
