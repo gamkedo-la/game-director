@@ -145,33 +145,33 @@ function drawSpashScreen() {
     var now = performance.now(); // ms
     spr(assets["images/splash_screen.png"],0,0);
     
-    spr(assets["images/programmer.png"],210,
+    spr(assets["images/programmer.png"],25,
         splashOffset+Math.sin(now*splashSpeed)*splashSize);
-    spr(assets["images/artist.png"],240,
+    spr(assets["images/artist.png"],100,
     splashOffset+Math.sin(now*splashSpeed*0.99+4444)*splashSize);
-    spr(assets["images/designer.png"],270,
+    spr(assets["images/designer.png"],170,
     splashOffset+Math.sin(now*splashSpeed*1.01+1234)*splashSize);
-    spr(assets["images/producer.png"],300,
+    spr(assets["images/producer.png"],220,
     splashOffset+Math.sin(now*splashSpeed*1.02+7582)*splashSize);
-    spr(assets["images/sound_engineer.png"],330,
+    spr(assets["images/sound_engineer.png"],270,
     splashOffset+Math.sin(now*splashSpeed*0.993+1759)*splashSize);
-    spr(assets["images/qa_lead.png"],360,
+    spr(assets["images/qa_lead.png"],320,
     splashOffset+Math.sin(now*splashSpeed*1.002+7492)*splashSize);
-    spr(assets["images/master_coder.png"],390,
+    spr(assets["images/master_coder.png"],370,
     splashOffset+Math.sin(now*splashSpeed*0.97+9232)*splashSize);
     spr(assets["images/level_designer.png"],420,
     splashOffset+Math.sin(now*splashSpeed*1.04+2345)*splashSize);
-    spr(assets["images/human_resources.png"],450,
+    spr(assets["images/human_resources.png"],400,
     splashOffset+Math.sin(now*splashSpeed*0.999+1024)*splashSize);
-    spr(assets["images/intern.png"],480,
+    spr(assets["images/intern.png"],450,
     splashOffset+Math.sin(now*splashSpeed*1.03+8500)*splashSize);
-    spr(assets["images/veteran.png"],510,
+    spr(assets["images/veteran.png"],500,
     splashOffset+Math.sin(now*splashSpeed*1.01+5973)*splashSize);
-    spr(assets["images/interviewer.png"],540,
+    spr(assets["images/interviewer.png"],550,
     splashOffset+Math.sin(now*splashSpeed*0.97+2053)*splashSize);
-    spr(assets["images/marketing.png"],570,
+    spr(assets["images/marketing.png"],600,
     splashOffset+Math.sin(now*splashSpeed*0.995+4654)*splashSize);
-    spr(assets["images/ceo.png"],600,
+    spr(assets["images/ceo.png"],680,
     splashOffset+Math.sin(now*splashSpeed*0.933+6789)*splashSize);
 
 }
