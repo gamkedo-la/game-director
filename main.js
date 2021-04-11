@@ -194,10 +194,10 @@ function draw(){
     }
 
     else if (gameState == "game win") {
-        //spr(assets["images/splash_screen.png"],0,0);
-        ctx.fillStyle = "white";
+        spr(assets["images/you_win_screen.png"],0,0);
+        //ctx.fillStyle = "white";
         //ctx.fillRect(canvasWidth / 2, canvasHeight / 265, 160, 512);
-        print("YOU'RE GAME HAS SUCCESSFULLY SHIPPED...", 256, 160, 512, "white", 64);
+        //print("YOU'RE GAME HAS SUCCESSFULLY SHIPPED...", 256, 160, 512, "white", 64);
     }
 	
 }	
