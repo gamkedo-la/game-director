@@ -188,9 +188,9 @@ function draw(){
 	} 
 
 	else if(gameState == "game over"){
-		//spr(assets["images/splash_screen.png"],0,0);
-		ctx.fillStyle = "white";
-		print("YOU'RE GAME HAS BEEN CANCELLED...",256,160,512,"white",64);
+		spr(assets["images/game_over_screen.png"],0,0);
+		//ctx.fillStyle = "white";
+		//print("YOU'RE GAME HAS BEEN CANCELLED...",256,160,512,"white",64);
     }
 
     else if (gameState == "game win") {
