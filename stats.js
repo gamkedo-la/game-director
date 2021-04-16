@@ -1,9 +1,16 @@
+const circleX = 148;
+const circleY = 12;
+
 function statPercent(val) {
 	// forces it to stay within 0..1
     let percent = val / 100;
     if (percent>1) percent = 1;
     if (percent<0) percent = 0;
 	return percent;
+}
+
+function wobble(min,max) { // used to pulse a value back n forth
+    return min+((Math.cos(performance.now()/200)+1)/2)*(max-min);
 }
 
 var statBar1 = createDisplayObject();
@@ -17,11 +24,11 @@ statBar1.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[0] != 0 ){
-			circFill(StatsX+136, StatsY+StatsSpacingY+4,6,"#fff");
+			circFill(StatsX+circleX, StatsY+StatsSpacingY +circleY,wobble(6,10),"#fff");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[0] != 0 ){
-			circFill(StatsX+136, StatsY+StatsSpacingY+4,6,"#fff");
+			circFill(StatsX+circleX, StatsY+StatsSpacing +circleY,wobble(6,10),"#fff");
 		}
 	}
 }
@@ -34,11 +41,11 @@ statBar2.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[1] != 0 ){
-			circFill(StatsX+136, StatsY+(StatsSpacingY*3) + 4, 6, "#fff");
+			circFill(StatsX+circleX, StatsY+(StatsSpacingY*3) +circleY, wobble(6,10), "#fff");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[1] != 0 ){
-			circFill(StatsX+136, StatsY+(StatsSpacingY*3) + 4, 6, "#fff");
+			circFill(StatsX+circleX, StatsY+(StatsSpacingY*3) +circleY, wobble(6,10), "#fff");
 		}
 	}
 	
@@ -52,11 +59,11 @@ statBar3.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[2] != 0 ){
-			circFill(StatsX+136, StatsY+(StatsSpacingY*5) + 4, 6, "#fff");
+			circFill(StatsX+circleX, StatsY+(StatsSpacingY*5) +circleY, wobble(6,10), "#fff");
 		}
 	}else if(noHover){
 		if(activeCard.noStats[2] != 0 ){
-			circFill(StatsX+136, StatsY+(StatsSpacingY*5) + 4, 6, "#fff");
+			circFill(StatsX+circleX, StatsY+(StatsSpacingY*5) +circleY, wobble(6,10), "#fff");
 		}
 	}
 	
@@ -70,11 +77,11 @@ statBar4.draw = function(){
 
 	if(yesHover){
 		if(activeCard.yesStats[3] != 0 ){
-			circFill(StatsX+136, StatsY+(StatsSpacingY*7) + 4, 6, "#fff");
+			circFill(StatsX+circleX, StatsY+(StatsSpacingY*7) +circleY, wobble(6,10), "#fff");
 		}
 	} else if(noHover){
 		if(activeCard.noStats[3] != 0 ){
-			circFill(StatsX+136, StatsY+(StatsSpacingY*7) + 4, 6, "#fff");
+			circFill(StatsX+circleX, StatsY+(StatsSpacingY*7) +circleY, wobble(6,10), "#fff");
 		}
 	}
 	

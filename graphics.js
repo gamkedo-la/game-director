@@ -127,8 +127,11 @@ function circFill(x,y,r,color){
   ctx.fillStyle = color;
   ctx.beginPath();
   ctx.arc(
-    r + (x),
-    r + (y),
+    x-r/2,
+    y-r/2,
+    // non centered version:
+    //r + (x),
+    //r + (y),
     r,
     0, 2 * Math.PI, false
   );
