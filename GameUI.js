@@ -1,8 +1,8 @@
 var weekCounter = createDisplayObject();
 
 weekCounter.draw = function(){
-	rectFill(800,0,180,130,"#5AB9A8");
-	print("WEEK: " + turn, 820, StatsY - 20, 50, "white", 20, "Helvetica");
+	rectFill(800,20,192,128,"#5AB9A8");
+	print("WEEK: " + turn, 820, StatsSpacingY - 20, 50, "white", 20, "Helvetica");
 }
 
 var cardFrame = createDisplayObject();

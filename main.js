@@ -7,8 +7,9 @@ var canvasHeight = c.height / PIXEL_RATIO;
 // ================= DECLARE VARIABLES HERE ======================
 var objectsToUpdate = [];
 
-const StatsX = 64;
-const StatsY = 32;
+const StatsX = 56;
+const StatsY = 30;
+const StatsSpacingY = 32; 
 
 var yesHover = false;
 var noHover = false;
