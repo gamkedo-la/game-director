@@ -169,9 +169,9 @@ function drawSpashScreen() {
     splashOffset+Math.sin(now*splashSpeed*1.01+5973)*splashSize);
     spr(assets["images/interviewer.png"],550,
     splashOffset+Math.sin(now*splashSpeed*0.97+2053)*splashSize);
-    spr(assets["images/marketing.png"],600,
-    splashOffset+Math.sin(now*splashSpeed*0.995+4654)*splashSize);
-    spr(assets["images/ceo.png"],680,
+    spr(assets["images/marketing.png"],575,
+    splashOffset+Math.sin(now*splashSpeed*0.888+4654)*splashSize);
+    spr(assets["images/ceo.png"],600,
     splashOffset+Math.sin(now*splashSpeed*0.933+6789)*splashSize);
 
 }
