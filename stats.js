@@ -11,7 +11,7 @@ statBar1.draw = function(){
 	
     rectFill(StatsX-28,StatsY-10,200,270,"#5AB9A8");
 	
-    print("MORALE", StatsX, StatsY+StatsSpacingY-50, 20, "white", 20, "Helvetica");
+    printWithShadow("MORALE", StatsX, StatsY+StatsSpacingY-50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY+StatsSpacingY,128,16,4,"white");
 	rectFill(StatsX,StatsY+StatsSpacingY,128 * statPercent(stats.morale),16,"white");
 
@@ -28,7 +28,7 @@ statBar1.draw = function(){
 
 var statBar2 = createDisplayObject();
 statBar2.draw = function(){
-	print("QUALITY", StatsX, StatsY+StatsSpacingY*3 - 50, 20, "white", 20, "Helvetica");
+	printWithShadow("QUALITY", StatsX, StatsY+StatsSpacingY*3 - 50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY+StatsSpacingY*3,128,16,4,"white");
 	rectFill(StatsX,StatsY+StatsSpacingY*3,128 * statPercent(stats.quality),16,"white");
 
@@ -46,7 +46,7 @@ statBar2.draw = function(){
 
 var statBar3 = createDisplayObject();
 statBar3.draw = function(){
-	print("SCHEDULE", StatsX, StatsY+StatsSpacingY*5 - 50, 20, "white", 20, "Helvetica");
+	printWithShadow("SCHEDULE", StatsX, StatsY+StatsSpacingY*5 - 50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY+StatsSpacingY*5,128,16,4,"white");
 	rectFill(StatsX,StatsY+StatsSpacingY*5,128 * statPercent(stats.time),16,"white");
 
@@ -64,7 +64,7 @@ statBar3.draw = function(){
 
 var statBar4 = createDisplayObject();
 statBar4.draw = function(){
-	print("BUDGET", StatsX, StatsY+StatsSpacingY*7 - 50, 20, "white", 20, "Helvetica");
+	printWithShadow("BUDGET", StatsX, StatsY+StatsSpacingY*7 - 50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY+StatsSpacingY*7,128,16,4,"white");
 	rectFill(StatsX,StatsY+StatsSpacingY*7,128 * statPercent(stats.budget),16,"white");
 

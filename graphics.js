@@ -58,6 +58,12 @@ function line(x0,y0,x1,y1,color){ // Creates a line
   ctx.stroke();
 }
 
+function printWithShadow(str, x, y, maxWidth, color, fontSize, fontFace) {
+    print(str, x+1, y+1, maxWidth, "black", fontSize, fontFace);
+    print(str, x, y, maxWidth, color, fontSize, fontFace);
+}
+
+
 function print(str, x, y, maxWidth, color, fontSize, fontFace){ // Print text to the canvas screen
   var firstY = y;
   var words = str.split(' ');
