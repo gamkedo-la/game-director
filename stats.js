@@ -9,7 +9,7 @@ function statPercent(val) {
 var statBar1 = createDisplayObject();
 statBar1.draw = function(){
 	
-    rectFill(StatsX-20,StatsY-10,180,270,"#5AB9A8");
+    rectFill(StatsX-28,StatsY-10,200,270,"#5AB9A8");
 	
     print("MORALE", StatsX, StatsY+StatsSpacingY-50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY+StatsSpacingY,128,16,4,"white");

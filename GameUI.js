@@ -1,8 +1,11 @@
 var weekCounter = createDisplayObject();
 
 weekCounter.draw = function(){
-	rectFill(800,20,192,128,"#5AB9A8");
-	print("WEEK: " + turn, 820, StatsSpacingY - 20, 50, "white", 20, "Helvetica");
+	//rectFill(796,20,200,128,"#5AB9A8");
+    spr(assets["images/calendar_bg.png"],792,20);
+	print("WEEK", 900, 70, 999, "#5AB9A8", 20, "Helvetica");
+    // fixme needs to be centered
+    print(""+turn, 910, 95, 999, "#5AB9A8", 60, "Helvetica");
 }
 
 var cardFrame = createDisplayObject();
