@@ -28,7 +28,7 @@ statBar1.draw = function(){
 		}
 	}else if(noHover){
 		if(activeCard.noStats[0] != 0 ){
-			circFill(StatsX+circleX, StatsY+StatsSpacing +circleY,wobble(6,10),"#fff");
+			circFill(StatsX+circleX, StatsY+StatsSpacingY +circleY,wobble(6,10),"#fff");
 		}
 	}
 }
