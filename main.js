@@ -59,7 +59,8 @@ function isMouseInside(pos, rect){
 c.addEventListener('click', function(evt) {
 
 	if(gameState == "splash"){
-		gameState = "game";
+		screenWipe.activated = true;
+		//gameState = "game";
 		music.play();
 	} else if(gameState == "game over"){
 		stats.morale = 50; //rename to match what's in stat data
@@ -179,6 +180,7 @@ function drawSpashScreen() {
 
 function draw(){
 	cls(); // clear screen
+
 	if(gameState == "splash"){
 		drawSpashScreen();
 	} else if(gameState == "game"){
@@ -200,6 +202,8 @@ function draw(){
         //ctx.fillRect(canvasWidth / 2, canvasHeight / 265, 160, 512);
         //print("YOU'RE GAME HAS SUCCESSFULLY SHIPPED...", 256, 160, 512, "white", 64);
     }
+
+    screenWipe.draw();
 	
 }	
 
