@@ -1,3 +1,10 @@
+
+const BLINK_EYELID_COLOR = 'white'; // nice for debugging positions - can be red instead
+// the art changed - hardcoded values all seemed off by the same amount
+const BLINKOFFSETX = 42;
+const BLINKOFFSETY = 42;
+
+
 var weekCounter = createDisplayObject();
 
 weekCounter.draw = function(){
@@ -30,8 +37,8 @@ cardImage.maybeBlink = function(x1=120,y1=110,x2=220,y2=110,r=30) {
         this.blinkUntil = now+150;
     }
     if (now<this.blinkUntil) {
-        circFill(this.x+x1-r,this.y+y1-r,r,'white');
-        circFill(this.x+x2-r,this.y+y2-r,r,'white');
+        circFill(this.x+x1-r+BLINKOFFSETX,this.y+y1-r+BLINKOFFSETX,r,BLINK_EYELID_COLOR);
+        circFill(this.x+x2-r+BLINKOFFSETX,this.y+y2-r+BLINKOFFSETY,r,BLINK_EYELID_COLOR);
     }
      
 }
@@ -111,7 +118,7 @@ cardImage.draw = function(){
 			break;
 		case "QA LEAD":
 			this.flipCard(assets["images/qa_lead.png"])
-            this.maybeBlink(155,165,230,163,15);
+            //this.maybeBlink(155,165,230,163,15);
 			break;
 		case "MASTER CODER":
 			this.flipCard(assets["images/master_coder.png"])
@@ -127,7 +134,7 @@ cardImage.draw = function(){
 			break;
 		case "INTERN":
 			this.flipCard(assets["images/intern.png"])
-            this.maybeBlink(165,160,230,160,15);
+            //this.maybeBlink(165,160,230,160,15);
 			break;
 		case "VETERAN":
 			this.flipCard(assets["images/veteran.png"])
