@@ -13,6 +13,7 @@ const StatsSpacingY = 32;
 
 var yesHover = false;
 var noHover = false;
+var confirmHover = false;
 
 var gameState = "splash";
 
@@ -76,15 +77,23 @@ c.addEventListener('click', function(evt) {
 	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
 			buttonClickSFX.play();
 			outputText.text = activeCard.yesResponse;
+			responseIsShowing = true;
 	        selectYes();
 	    } else if(isMouseInside(mousePos,noChoiceText.rect)){
 	    	buttonClickSFX.play();
 	    	outputText.text = activeCard.noResponse;
+	    	responseIsShowing = true;
 	        selectNo();
 	    }  
 	} else{
-		flipCard();
-		outputText.text = activeCard.question;
+		var mousePos = getMousePos(c, evt);
+
+		if(isMouseInside(mousePos, confirmButton.rect)){
+			buttonClickSFX.play();
+			flipCard();
+			outputText.text = activeCard.question;
+			responseIsShowing = false;
+		}
 	}
      
 }, false);
@@ -101,6 +110,7 @@ c.addEventListener('mousemove', function(evt) {
 	    	}
 	    	yesHover = true;
 	    	noHover = false;
+	    	confirmHover = false;
 	    	c.style.cursor = "pointer";
 	        //console.log("Hovering Over Option 1");
 	    }else if(isMouseInside(mousePos,noChoiceText.rect)){
@@ -109,14 +119,33 @@ c.addEventListener('mousemove', function(evt) {
 	    	}
 	    	yesHover = false;
 	    	noHover = true;
+	    	confirmHover = false;
 	    	c.style.cursor = "pointer";
 	        //console.log("Hovering Over Option 2");
 	    } else{
 	    	yesHover = false;
 	    	noHover = false;
+	    	confirmHover = false;
 	    	c.style.cursor = "default";
 	    	//console.log("NO HOVER!");
 	    }
+	} else{
+		var mousePos = getMousePos(c, evt);
+
+		if(isMouseInside(mousePos,confirmButton.rect)){
+	    	if(!confirmHover){
+	    		buttonHoverSFX.play();
+	    	}
+	    	yesHover = false;
+	    	noHover = false;
+	    	confirmHover = true;
+	    	c.style.cursor = "pointer";
+		} else{
+			yesHover = false;
+	    	noHover = false;
+	    	confirmHover = false;
+	    	c.style.cursor = "default";
+		}
 	}
 });
 

@@ -233,3 +233,39 @@ noChoiceText.draw = function(){
 		
 	}	
 }
+
+var confirmButton = createDisplayObject();
+confirmButton.hoverWidth = 0;
+confirmButton.rect = {
+	x: cardImage.x,
+	y: cardImage.y + cardImage.height + 115,
+	width: cardImage.width,
+	height: 30,
+}
+confirmButton.draw = function(){
+	//If button is being hovered over, start filling it gradually
+	if(confirmHover){
+		if(confirmButton.hoverWidth < cardImage.width){
+			confirmButton.hoverWidth += 16;
+		} else{
+			confirmButton.hoverWidth = cardImage.width;
+		}
+		
+	} else{
+		confirmButton.hoverWidth = 0;
+	}
+
+	if(responseIsShowing){
+		ctx.fillStyle = "#5ab9a8";
+		rect(cardImage.x, cardImage.y + cardImage.height + 115, cardImage.width, 30, 1, "#5ab9a8");
+		rectFill(cardImage.x, cardImage.y + cardImage.height + 115, confirmButton.hoverWidth, 30, 1, "#5ab9a8");
+		if(confirmHover){
+			ctx.fillStyle = "white";
+			print("  " + "Thank you", cardImage.x, cardImage.y + cardImage.height + 120, "white", 20, "Helvetica");
+		} else{
+			ctx.fillStyle = "black";
+			print("  " + "Thank you", cardImage.x, cardImage.y + cardImage.height + 120, "black", 20, "Helvetica");
+		}
+		
+	}	
+}

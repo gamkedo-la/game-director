@@ -93,6 +93,7 @@ var deck = createDeck();
 var validDeck = createValidDeck();
 var activeCard;
 var turn = 0;
+var responseIsShowing = false;
 
 
 //Creates a deck of story cards from the Story variable

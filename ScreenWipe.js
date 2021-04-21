@@ -1,7 +1,7 @@
 var screenWipe = {};
 screenWipe.frame = 0;
 screenWipe.tickCount = 0;
-screenWipe.ticksPerFrame = 4;
+screenWipe.ticksPerFrame = 2;
 screenWipe.inReverse = false;
 screenWipe.activated = false;
 
