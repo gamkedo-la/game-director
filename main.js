@@ -79,11 +79,13 @@ c.addEventListener('click', function(evt) {
 			outputText.text = activeCard.yesResponse;
 			responseIsShowing = true;
 	        selectYes();
+			voxAnswer[activeCard.author].play();
 	    } else if(isMouseInside(mousePos,noChoiceText.rect)){
 	    	buttonClickSFX.play();
 	    	outputText.text = activeCard.noResponse;
 	    	responseIsShowing = true;
 	        selectNo();
+			voxAnswer[activeCard.author].play();
 	    }  
 	} else{
 		var mousePos = getMousePos(c, evt);
@@ -93,6 +95,7 @@ c.addEventListener('click', function(evt) {
 			flipCard();
 			outputText.text = activeCard.question;
 			responseIsShowing = false;
+			voxQuestion[activeCard.author].play();
 		}
 	}
      
