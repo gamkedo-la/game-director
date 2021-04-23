@@ -26,8 +26,8 @@ var assetsToload = ["images/programmer.png",
 
 var assets = {};
 
-var buttonClickSFX = new soundEffectClass("audio/select.wav", 0.5);
-var buttonHoverSFX = new soundEffectClass("audio/hover.wav", 0.5);
+var buttonClickSFX = new soundEffectClass("audio/select.wav", 0.4);
+var buttonHoverSFX = new soundEffectClass("audio/hover.wav", 0.4);
 var cardFlipSFX = new soundEffectClass("audio/card_flip.wav", 1);
 var music = new musicClass("audio/MusicWeDevTo.mp3", 82.5, 0.6);
 
