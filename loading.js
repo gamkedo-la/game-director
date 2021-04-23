@@ -21,7 +21,8 @@ var assetsToload = ["images/programmer.png",
                     "images/game_over_screen.png",
                     "images/you_win_screen.png",
                     "images/calendar_bg.png",
-                    "images/transition.png"
+                    "images/transition.png",
+                    "images/ubersoft_ceo.png"
 					];
 
 var assets = {};
