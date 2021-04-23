@@ -310,13 +310,7 @@ qabuild,QA LEAD,,100,0,I took a couple days off. I got caught up on sleep and I 
 ,CEO,turn >= 52,0,0,I need to have more faith in my game marketers. Can I?,Yes..?,Your principle is what I love about you,40,0,0,0,,Leave it to fate!,No you can't trust anyone.,-5,,,,,V
 ,PRODUCER,turn >= 52,0,0,The producers are breaking their necks to release this game.,That's awesome!,I'm sure you guys can make it,20,0,0,0,,Can they make it?,No pressure!,-5,,,,,V
 ,PRODUCER,turn >= 52,0,0,"Guys, we shipped the game! You're all awesome. Who's in for a party? ",Me!,We all are!,,,,,,Not me!,I'm so tired. I wanna take it easy.,-5,,,,,V
-,CEO,turn >= 52,0,0,Thank you everyone for all your hard work! This game was possible becuase of your effort and determination. I can't thank you enoguh.,Thank you!,It was an honor!,,,,,,"Sorry, but I can't take it anymore!",Don't thank me!,,,,,,V
-,MASTER CODER,,,,I wanna go on a trip and take it easy!,Hope you'll have a good time!,Be safe!,,,,,,You can't. We have more to do!,I can't go and I'm so sad. ,,,,,,V
-,CEO,,,,Somebody has to go the BGS exhibisition in Japan. Who's available? ,I'm available.,Wow! Let me take this trip. ,,,,,,"Nah, got a lot to take in!",Sorry. Can't do it.,,,,,,V
-,MARKETING,,,,There's a lot more to do in term of merketting from now on. I have got to prepare our events amd content. ,Good Luck!,Let me know If I can help,,,,,,Too bad for you!,Woudn't wanna be ya!,,,,,,V
-,LEVEL DESIGNER,,,,I'm going to the party! What should I take?,A chmpange would be great!,Anything you wish.,,,,,,No idea man!,Whatever.,,,,,,V
-,SOUND DESIGNER,,,,They've asked to become the DJ at the pary. It's not my job but I guess I'll have no choice but to do it.,"If you use automation, it'll be fine!",We all need you!,,,,,,Don't do it then.,Reject!,,,,,,V
-,INTERVIEWER,,,,What message do you have for the players?,I hope you will enjoy the game!,"We put all our love into it, take your time and enjoy it.",,,,,,"There's many secrets. If you don't find them all, you're not a player.","Players, please buy the game.",-10,,,,,V`;
+,CEO,turn >= 52,0,0,Thank you everyone for all your hard work! This game was possible becuase of your effort and determination. I can't thank you enoguh.,Thank you!,It was an honor!,,,,,,"Sorry, but I can't take it anymore!",Don't thank me!,,,,,,V`;
 
 
 
