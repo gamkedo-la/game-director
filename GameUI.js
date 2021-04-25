@@ -89,10 +89,43 @@ cardImage.flipCard = function(img) {
         offset = img.width/2 - w/2; // center
         ctx.drawImage(this.flipCardImg,this.x+offset,this.y,w,h);
     }
-
 }
 
+var scoreUI = createDisplayObject();
+scoreUI.width = 100;
+scoreUI.height = 50;
+currentScore = 0;
+bestScores = [];
+scoreUI.update = function () {
+  if (currentScore > bestScores) {
+    bestScores.push(currentScore);
+  }
+  bestScores.sort(function (a, b) {
+    return b - a;
+  });
+  if (bestScores.length > 10) {
+    bestScores.pop();
+  }
+  for (i = 0; i < bestScores.length; i++) {
+    window.localStorage.setItem('bestscores' + i, bestScores[i]);
+  }
+}
+scoreUI.draw = function () {
+  /*
+  rectFill(30, canvasHeight - (this.height*2.5), this.width, this.height, "#5ab9a8");
+  printWithShadow("Score", 40, canvasHeight - (this.height*2.5), 111, "#FFFFFF", 25, "Helvetica");
+  print(currentScore.toString(), 40, canvasHeight - (this.height * 2.5) + 25, canvasHeight - (this.height), "black", 20, "Helvetica");
 
+  rectFill(30, canvasHeight - (this.height)-20, this.width+20, this.height, "#5ab9a8");
+  printWithShadow("HighScore", 30, canvasHeight - (this.height) - 50, 111, "#FFFFFF", 25, "Helvetica");
+  if (window.localStorage.getItem('score0') != null) {
+    for (i = 0; i < bestScores.length; i++) {
+      bestScores[i] = window.localStorage.getItem('bestscores' + i);
+    }
+    print(bestScores.toString(), 40, canvasHeight - (this.height) + 25, canvasHeight - (this.height), "black", 20, "Helvetica");
+  }*/
+  
+}
 
 cardImage.draw = function(){
 	switch(activeCard.author){
