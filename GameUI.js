@@ -37,6 +37,10 @@ function randomThankYou() {
         "I'm satisfied.",
         "Good enough.",
         "Thanks!",
+        "End of line",
+        "Wonderful!",
+        "Rock on!",
+        "Cheers!",
     ];
     // actual random would flicker every option on draw()
     // return thanks[Math.floor(Math.random()*thanks.length)];
