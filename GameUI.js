@@ -4,6 +4,44 @@ const BLINK_EYELID_COLOR = 'white'; // nice for debugging positions - can be red
 const BLINKOFFSETX = 42;
 const BLINKOFFSETY = 42;
 
+function randomThankYou() {
+    const thanks = [
+        "Thank You.",
+        "Great.",
+        "Okay.",
+        "Nice.",
+        "Thanks.",
+        "Got it.",
+        "Talk to you later.",
+        "That's all for now.",
+        "Dismissed.",
+        "I appreciate it.",
+        "Until next time.",
+        "Nice talking to you.",
+        "Good talk.",
+        "Thank you.",
+        "Thanks.",
+        "Ok.",
+        "Later.",
+        "Let's talk soon.",
+        "Thanks.",
+        "Have a nice day.",
+        "Thanks again.",
+        "Have a great day.",
+        "Well done.",
+        "Good work.",
+        "Perfect.",
+        "Thank you.",
+        "Goodbye.",
+        "End of discussion.",
+        "I'm satisfied.",
+        "Good enough.",
+        "Thanks!",
+    ];
+    // actual random would flicker every option on draw()
+    // return thanks[Math.floor(Math.random()*thanks.length)];
+    return thanks[(turn-1)%thanks.length]; // sequential looping
+}
 
 var weekCounter = createDisplayObject();
 
@@ -297,10 +335,10 @@ confirmButton.draw = function(){
 		rectFill(cardImage.x, cardImage.y + cardImage.height + 115, confirmButton.hoverWidth, 30, 1, "#5ab9a8");
 		if(confirmHover){
 			ctx.fillStyle = "white";
-			print("  " + "Thank you", cardImage.x, cardImage.y + cardImage.height + 120, "white", 20, "Helvetica");
+			print("  " + randomThankYou(), cardImage.x, cardImage.y + cardImage.height + 120, "white", 20, "Helvetica");
 		} else{
 			ctx.fillStyle = "black";
-			print("  " + "Thank you", cardImage.x, cardImage.y + cardImage.height + 120, "black", 20, "Helvetica");
+			print("  " + randomThankYou(), cardImage.x, cardImage.y + cardImage.height + 120, "black", 20, "Helvetica");
 		}
 		
 	}	
