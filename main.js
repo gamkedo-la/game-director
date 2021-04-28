@@ -64,11 +64,15 @@ c.addEventListener('click', function(evt) {
 		//gameState = "game";
 		music.play();
 	} else if(gameState == "game over"){
-		stats.morale = 50; //rename to match what's in stat data
-		stats.quality = 50;
-		stats.time = 50;
-		stats.budget = 50;
-		gameState = "game";
+		//resetStats();
+		location.reload();
+		screenWipe.activated = true;
+		//gameState = "game";
+	}else if(gameState == "game win"){
+		//resetStats();
+		location.reload();
+		screenWipe.activated = true;
+		//gameState = "game";
 	}
 
 	if(activeCard.active){
@@ -153,6 +157,68 @@ c.addEventListener('mousemove', function(evt) {
 });
 
 flipCard(); // Flip the first story card
+
+function resetStats(){
+	stats.morale = 50;
+	stats.quality = 50;
+	stats.time = 50;
+	stats.budget = 50;
+
+
+	programmer_ate_pudding = false;
+	qa_intense = false;
+	qa_gaveup = false;
+	marketing_offered_interview = false;
+	scope_has_shrunk = false;
+	programmer_has_overwritten_truth = false;
+	purchased_backup = false;
+	programmer_meeting_called = false;
+	marketing_has_budget = false;
+	intern_help_art = false;
+	intern_help_programmer = false;
+	training_program_starting = false;
+	advanced_trailer_bought = false;
+	video_channel_created = false;
+	suggestion_box_active = false;
+	create_ost = false;
+	advanced_trailer_not_bought = false;
+	pets_allowed = false;
+	big_bug_missed = false;
+	team_meeting_scheduled = false;
+	intern_idea_pitched = false;
+	intern_idea_active = false;
+	find_the_leak = false;
+	hit_piece_interview = false;
+	has_been_bought_minor = false;
+	localization_complete = false;
+	active_multiplayer = false;
+	kaizen_implemented = false;
+	untested_code_prod_truth = false;
+	untested_code_prod_lie = false;
+	fetch_programmer = false;
+	intern_punishment = false;
+	gameplay_changed = false;
+	gameplay_broken = false;
+	vr_available = false;
+	artistlove = 0;
+	artist_ask_date = false;
+	breakup_initiated = false;
+	relationship_approved = false;
+	internmissing = 0;
+	sounddesignhobby = 0;
+	ismining = false;
+	double_mine = false;
+	hrtalent = 0;
+	qafan = 0;
+
+
+	activeCard.active = false;
+	turn = 0;
+	responseIsShowing = false;
+	resetLockedCards();
+	flipCard();
+	outputText.text = activeCard.question;
+}
 
 // ================= RUN THE GAMELOOP ======================
 setInterval(gameloop,16);
