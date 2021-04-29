@@ -41,10 +41,26 @@ function randomThankYou() {
         "Wonderful!",
         "Rock on!",
         "Cheers!",
+        "That is all.",
+        "Be gone.",
     ];
     // actual random would flicker every option on draw()
     // return thanks[Math.floor(Math.random()*thanks.length)];
     return thanks[(turn-1)%thanks.length]; // sequential looping
+}
+
+function randomGameOverQuote() {
+    const gameoverquote = [
+        "Making games is not as easy as it looks!",
+        "Maybe it's time to take a sabbatical.",
+		"Better luck next time!",
+		"My next game will be twice as big!!",
+		"If only I had joined HomeTeam GameDev!",
+    ];
+    // appropriated with love from mcfunkypants' thanks function above
+    // actual random would flicker every option on draw()
+    // return gameoverquote[Math.floor(Math.random()*gameoverquote.length)];
+    return gameoverquote[(turn-1)%gameoverquote.length]; // sequential looping
 }
 
 var weekCounter = createDisplayObject();
