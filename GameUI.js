@@ -234,7 +234,7 @@ cardImage.draw = function(){
 			break;
 		case "HUMAN RESOURCES":
 			this.flipCard(assets["images/human_resources.png"])
-            this.maybeBlink(155,168,195,168);
+            this.maybeBlink(155,168,210,168);
 			break;
 		case "INTERN":
 			this.flipCard(assets["images/intern.png"])
@@ -246,7 +246,7 @@ cardImage.draw = function(){
 			break;
 		case "CEO":
 			this.flipCard(assets["images/ceo.png"])
-            this.maybeBlink(180,160,240,160);
+            this.maybeBlink(180,160,250,160);
 			break;
 		case "MARKETING":
 			this.flipCard(assets["images/marketing.png"])
