@@ -22,7 +22,7 @@ choiceHint.draw = function(){
     
     if ((yesHover && activeCard.yesStats[0]) ||
         (noHover && activeCard.noStats[0])) {
-        advice += "morale";
+        advice += "confidence";
     }
     if ((yesHover && activeCard.yesStats[1]) ||
         (noHover && activeCard.noStats[1])) {
