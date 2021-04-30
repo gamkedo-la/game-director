@@ -75,7 +75,7 @@ c.addEventListener('click', function(evt) {
 		//gameState = "game";
 	}
 
-	if(activeCard.active){
+	if(activeCard.active && !(gameState == "splash")){
 		var mousePos = getMousePos(c, evt);
 
 	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
@@ -108,7 +108,7 @@ c.addEventListener('click', function(evt) {
 //Check to see if the mouse is hovering over any buttons
 c.addEventListener('mousemove', function(evt) {
 
-	if(activeCard.active){
+	if(activeCard.active && !(gameState == "splash")){
 		var mousePos = getMousePos(c, evt);
 
 	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
@@ -139,7 +139,7 @@ c.addEventListener('mousemove', function(evt) {
 	} else{
 		var mousePos = getMousePos(c, evt);
 
-		if(isMouseInside(mousePos,confirmButton.rect)){
+		if(isMouseInside(mousePos,confirmButton.rect) && !(gameState == "splash")){
 	    	if(!confirmHover){
 	    		buttonHoverSFX.play();
 	    	}
