@@ -122,7 +122,9 @@ c.addEventListener('click', function(evt) {
 //Check to see if the mouse is hovering over any buttons
 c.addEventListener('mousemove', function(evt) {
 
-	if(activeCard.active && !(gameState == "splash")){
+	if(gameState == "credits") {
+		// suppress mouseover sounds
+	} else if(activeCard.active && !(gameState == "splash")){
 		var mousePos = getMousePos(c, evt);
 
 	    if (isMouseInside(mousePos,yesChoiceText.rect)) {
@@ -295,7 +297,10 @@ function draw(){
 	cls(); // clear screen
 
 	if(gameState == "credits") {
-		print("Credits will go here", 295,16, 300, "white", "18", "sans-serif");
+		print("Click anywhere to return", 415,canvasHeight-30, 300, "white", "18", "sans-serif");
+		for(var i=0; i<creditsList.length;i++) {
+			print(creditsList[i], 40,25+i*25, 1000, "#cccccc", "25", "sans-serif");
+		}
 		return;
 	} else if(gameState == "splash"){
 		drawSpashScreen();
@@ -323,5 +328,39 @@ function draw(){
 	
 }	
 
+let creditsList = [
+"Gabriel Cornish: Project lead, core gameplay, choice game engine, spreadsheet integration, art direction, majority of character card art, background pattern, additional writing, assorted bug fixing, initial splash screen, game over, hover button effect, screen trasitions"," ",
+"Cassidy Noble: Lead writer (about 80% of dialog)"," ",
+"Christer \"McFunkypants\" Kaitila: Stats bars flash when low, NPC blinking effect, animated stat hints, text drop shadow effect, title card animation, advisor feature, random thank you messages, three additional NPCs, additional writing, week counter UI calendar styling"," ",
+"Lane Watson: Dialog editing"," ",
+"Vaan Hope Khani: Story for game shipping win state, start of scoring code"," ",
+"Michael \"Misha\" Fewkes: Audio code, audio barks recording and integration, card flip audio"," ",
+"Simon Donohoe: Two story cards, week counter UI frame"," ",
+"Jeff \"Axphin\" Hanlon: Initial thank you quotes, additional ending text"," ",
+"H Trayford: Intern and veteran images"," ",
+"Made by members in HomeTeamGameDev.com Apollo - come make games with us!"];
+let creditsMaxCharWidthToWrap = 84;
+
+function wrapCredits() { // note: gets calling immediately after definition
+    let newCut = [];
+    let findEnd;
+    for(var i=0;i<creditsList.length;i++) {
+        while(creditsList[i].length > 0) {
+            findEnd = creditsMaxCharWidthToWrap;
+            if(creditsList[i].length > creditsMaxCharWidthToWrap) {
+                for(var ii=findEnd;ii>0;ii--) {
+                    if(creditsList[i].charAt(ii) == " ") {
+                        findEnd=ii;
+                        break;
+                    }
+                }
+            }
+            newCut.push(creditsList[i].substring(0, findEnd));
+            creditsList[i] = creditsList[i].substring(findEnd, creditsList[i].length);
+        }
+    }
+    creditsList = newCut;
+}
+wrapCredits(); // calling once right at start
 
 
