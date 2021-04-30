@@ -4,46 +4,59 @@ const BLINK_EYELID_COLOR = 'white'; // nice for debugging positions - can be red
 const BLINKOFFSETX = 42;
 const BLINKOFFSETY = 42;
 
+var thanks = [
+    "Thank You.",
+    "Great.",
+    "Okay.",
+    "Nice.",
+    "Thanks.",
+    "Got it.",
+    "Talk to you later.",
+    "That's all for now.",
+    "Dismissed.",
+    "I appreciate it.",
+    "Be gone.",
+    "Until next time.",
+    "Nice talking to you.",
+    "Good talk.",
+    "Thank you.",
+    "You may go now.",
+    "Thanks.",
+    "Ok.",
+    "Later.",
+    "Let's talk soon.",
+    "Thanks.",
+    "That is all.",
+    "Have a nice day.",
+    "Thanks again.",
+    "Have a great day.",
+    "Well done.",
+    "Good work.",
+    "Perfect.",
+    "Thank you.",
+    "Goodbye.",
+    "End of discussion.",
+    "I'm satisfied.",
+    "Good enough.",
+    "Thanks!",
+    "End of line",
+    "Wonderful!",
+    "Rock on!",
+    "Cheers!",
+    "That is all.",
+    "Be gone.",
+];
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  shuffle(thanks); // so it is different every playthrough
+
 function randomThankYou() {
-    const thanks = [
-        "Thank You.",
-        "Great.",
-        "Okay.",
-        "Nice.",
-        "Thanks.",
-        "Got it.",
-        "Talk to you later.",
-        "That's all for now.",
-        "Dismissed.",
-        "I appreciate it.",
-        "Until next time.",
-        "Nice talking to you.",
-        "Good talk.",
-        "Thank you.",
-        "Thanks.",
-        "Ok.",
-        "Later.",
-        "Let's talk soon.",
-        "Thanks.",
-        "Have a nice day.",
-        "Thanks again.",
-        "Have a great day.",
-        "Well done.",
-        "Good work.",
-        "Perfect.",
-        "Thank you.",
-        "Goodbye.",
-        "End of discussion.",
-        "I'm satisfied.",
-        "Good enough.",
-        "Thanks!",
-        "End of line",
-        "Wonderful!",
-        "Rock on!",
-        "Cheers!",
-        "That is all.",
-        "Be gone.",
-    ];
     // actual random would flicker every option on draw()
     // return thanks[Math.floor(Math.random()*thanks.length)];
     return thanks[(turn-1)%thanks.length]; // sequential looping
