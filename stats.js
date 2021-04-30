@@ -19,7 +19,7 @@ statBar1.draw = function(){
 	
     rectFill(StatsX-28,StatsY-10,200,270,"#5AB9A8");
 	
-    printWithShadow("MORALE", StatsX, StatsY+StatsSpacingY-50, 20, "white", 20, "Helvetica");
+    printWithShadow("CONFIDENCE", StatsX, StatsY+StatsSpacingY-50, 20, "white", 20, "Helvetica");
 	rect(StatsX,StatsY+StatsSpacingY,128,16,4,"white");
     var perc = statPercent(stats.morale);
     var col = "white";
