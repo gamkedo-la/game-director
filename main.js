@@ -17,6 +17,12 @@ var confirmHover = false;
 
 var gameState = "splash";
 
+var creditsButtonX = 295;
+var creditsButtonY = 16;
+var creditsButtonWidth = 140;
+var creditsButtonHeight = 20;
+var creditsRect = {x: creditsButtonX, y: creditsButtonY, width: creditsButtonWidth, height: creditsButtonHeight};
+
 // ================= INIT FUNCTIONS ======================
 window.onload = function(){
 	window.addEventListener('keydown',keyDown,true);
@@ -59,10 +65,18 @@ function isMouseInside(pos, rect){
 //Binding the click event on the canvas
 c.addEventListener('click', function(evt) {
 
-	if(gameState == "splash"){
-		screenWipe.activated = true;
-		//gameState = "game";
-		music.play();
+	if(gameState == "credits") {
+		gameState = "splash";
+		return;
+	} else if(gameState == "splash"){
+		var mousePos = getMousePos(c, evt);
+		if(isMouseInside(mousePos,creditsRect)) {
+			gameState = "credits";
+		} else {
+			screenWipe.activated = true;
+			//gameState = "game";
+			music.play();
+		}
 	} else if(gameState == "game over"){
 		//resetStats();
 		location.reload();
@@ -274,12 +288,16 @@ function drawSpashScreen() {
     spr(assets["images/ceo.png"],600,
     splashOffset+Math.sin(now*splashSpeed*0.933+6789)*splashSize);
 
+    print("Team Credits", creditsButtonX,creditsButtonY, creditsButtonWidth, "white", "18", "sans-serif");
 }
 
 function draw(){
 	cls(); // clear screen
 
-	if(gameState == "splash"){
+	if(gameState == "credits") {
+		print("Credits will go here", 295,16, 300, "white", "18", "sans-serif");
+		return;
+	} else if(gameState == "splash"){
 		drawSpashScreen();
 	} else if(gameState == "game"){
 		spr(assets["images/pattern_background.png"],0,0);
