@@ -68,7 +68,7 @@ function print(str, x, y, maxWidth, color, fontSize, fontFace){ // Print text to
   var firstY = y;
   var words = str.split(' ');
   var line = '';
-  var lineHeight = fontSize * 1.286; // aprox for 10-18px sizes
+  var lineHeight = fontSize * 1.1;// made slightly smaller to fit four lines in the prompt was: 1.286; // aprox for 10-18px sizes
 
   ctx.fillStyle = color;
   ctx.font = fontSize + "px " + fontFace || "12px sans-serif";
