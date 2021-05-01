@@ -290,7 +290,7 @@ yesChoiceText.draw = function(){
 		yesChoiceText.hoverWidth = 0;
 	}
 
-	if(activeCard.active){
+	if(activeCard.active && !responseIsShowing){
 		ctx.fillStyle = "#5ab9a8";
 		rect(cardImage.x, cardImage.y + cardImage.height + 75, cardImage.width, 30, 1, "#5ab9a8");
 		rectFill(cardImage.x, cardImage.y + cardImage.height + 75, yesChoiceText.hoverWidth, 30, 1, "#5ab9a8");
@@ -326,7 +326,7 @@ noChoiceText.draw = function(){
 		noChoiceText.hoverWidth = 0;
 	}
 
-	if(activeCard.active){
+	if(activeCard.active && !responseIsShowing){
 		ctx.fillStyle = "#5ab9a8";
 		rect(cardImage.x, cardImage.y + cardImage.height + 115, cardImage.width, 30, 1, "#5ab9a8");
 		rectFill(cardImage.x, cardImage.y + cardImage.height + 115, noChoiceText.hoverWidth, 30, 1, "#5ab9a8");

@@ -195,6 +195,7 @@ function goto(label){
 	if(gotoCard){
 		setActiveCard(gotoCard.id);
 		outputText.text = activeCard.question;
+		responseIsShowing = false;
 	}
 }
 
@@ -209,8 +210,8 @@ function updateCardConditions(){
 function selectYes(){
 	if(activeCard.active){
 		applyStats(activeCard.yesStats);
-		activeCard.applyYesOutcome(activeCard.id);
-		updateCardConditions();
+		//activeCard.applyYesOutcome(activeCard.id);
+		//updateCardConditions();
 		activeCard.active = false;
 		return true;
 	}
@@ -220,8 +221,8 @@ function selectYes(){
 function selectNo(){
 	if(activeCard.active){
 		applyStats(activeCard.noStats);
-		activeCard.applyNoOutcome(activeCard.id);
-		updateCardConditions();
+		//activeCard.applyNoOutcome(activeCard.id);
+		//updateCardConditions();
 		activeCard.active = false;
 		return true;
 	}

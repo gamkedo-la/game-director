@@ -110,10 +110,22 @@ c.addEventListener('click', function(evt) {
 
 		if(isMouseInside(mousePos, confirmButton.rect)){
 			buttonClickSFX.play();
-			flipCard();
-			outputText.text = activeCard.question;
-			responseIsShowing = false;
-			voxQuestion[activeCard.author].play();
+
+			if(outputText.text == activeCard.yesResponse && responseIsShowing){
+				activeCard.active = false;
+				activeCard.applyYesOutcome(activeCard.id);
+			} else if(outputText.text == activeCard.noResponse && responseIsShowing){
+				activeCard.active = false;
+				activeCard.applyNoOutcome(activeCard.id);
+			}
+
+			if(activeCard.active == false){
+				updateCardConditions();
+				flipCard();
+				outputText.text = activeCard.question;
+				responseIsShowing = false;
+				voxQuestion[activeCard.author].play();
+			}
 		}
 	}
      
