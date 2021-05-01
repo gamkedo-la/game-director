@@ -44,7 +44,7 @@ choiceHint.draw = function(){
     let pos = advice.lastIndexOf(",");
     if (pos>0) advice = advice.substring(0,pos) + ", and" + advice.substring(pos+1)
 
-    if (advice =="") advice = "nothing";
+    if (advice =="") advice = "something in the future.";
 
     advice = "This choice will affect " + advice + ".";
 	print(advice,x+10,y+10,200,"black",20,"Helvetica");
