@@ -341,7 +341,7 @@ function draw(){
 }	
 
 let creditsList = [
-"Gabriel Cornish: Project lead, core gameplay, choice game engine, spreadsheet integration, art direction, majority of character card art, background pattern, additional writing, assorted bug fixing, initial splash screen, game over, hover button effect, screen trasitions"," ",
+"Gabriel Cornish: Project lead, core gameplay, choice game engine, spreadsheet integration, art direction, majority of character card art, background pattern, additional writing, assorted bug fixing, initial splash screen, game over, hover button effect, screen transitions"," ",
 "Cassidy Noble: Lead writer (about 80% of dialog)"," ",
 "Christer \"McFunkypants\" Kaitila: Stats bars flash when low, NPC blinking effect, animated stat hints, text drop shadow effect, title card animation, advisor feature, random thank you messages, three additional NPCs, additional writing, week counter UI calendar styling"," ",
 "Lane Watson: Dialog editing"," ",
