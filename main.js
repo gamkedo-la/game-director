@@ -109,8 +109,8 @@ c.addEventListener('click', function(evt) {
 		var mousePos = getMousePos(c, evt);
 
 		if(isMouseInside(mousePos, confirmButton.rect)){
-			buttonClickSFX.play();
-
+      buttonClickSFX.play();
+      currentScore = Math.floor(overAllPerformence);
 			if(outputText.text == activeCard.yesResponse && responseIsShowing){
 				activeCard.active = false;
 				activeCard.applyYesOutcome(activeCard.id);

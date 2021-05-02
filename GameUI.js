@@ -167,13 +167,33 @@ scoreUI.width = 100;
 scoreUI.height = 50;
 currentScore = 0;
 bestScores = [];
+var overAllPerformence = 0;
+function calcdiff(ary) {
+  var diff = [];
+  for (var i = 1; i < ary.length; i++) {
+    diff.push(ary[i] - ary[i - 1])
+  } 
+  return diff;
+}
 scoreUI.update = function () {
-  if (currentScore > bestScores) {
-    bestScores.push(currentScore);
+  var statsList = [stats.budget / 10, stats.morale / 10, stats.quality / 10, stats.time / 10];
+  statsMax = Math.floor(Math.min.apply(null, statsList));
+  statsMin = Math.floor(Math.max.apply(null, statsList));
+  statsMargin = Math.floor((statsMax - statsMin) / statsMin * 10);
+  overallTemp = calcdiff(statsList);
+  for (var i = 1; i < overallTemp.length; i++) {
+      overAllPerformence = overallTemp[i] * statsMargin;
   }
-  bestScores.sort(function (a, b) {
+  bestPerformance = Math.max.apply(null, bestScores)
+ bestScores.sort(function (a, b) {
     return b - a;
   });
+  for (var i = 1; i < bestScores.length; i++) {
+    if (currentScore > bestScores[i]) {
+      bestScores.push(currentScore);
+    }
+  }
+
   if (bestScores.length > 10) {
     bestScores.pop();
   }
@@ -181,21 +201,24 @@ scoreUI.update = function () {
     window.localStorage.setItem('bestscores' + i, bestScores[i]);
   }
 }
+
 scoreUI.draw = function () {
-  /*
-  rectFill(30, canvasHeight - (this.height*2.5), this.width, this.height, "#5ab9a8");
-  printWithShadow("Score", 40, canvasHeight - (this.height*2.5), 111, "#FFFFFF", 25, "Helvetica");
+ /*
+  rectFill(30, canvasHeight - (this.height * 2.5), this.width*1.5, this.height, "#5ab9a8");
+  printWithShadow("Performance", 35, canvasHeight - (this.height * 2.9), 111, "#FFFFFF", 20, "Helvetica");
   print(currentScore.toString(), 40, canvasHeight - (this.height * 2.5) + 25, canvasHeight - (this.height), "black", 20, "Helvetica");
 
-  rectFill(30, canvasHeight - (this.height)-20, this.width+20, this.height, "#5ab9a8");
-  printWithShadow("HighScore", 30, canvasHeight - (this.height) - 50, 111, "#FFFFFF", 25, "Helvetica");
+  rectFill(30, canvasHeight - (this.height)-20, this.width*2, this.height, "#5ab9a8");
+  printWithShadow("BestPerformance", 30, canvasHeight - (this.height * 1.8), 111, "#FFFFFF", 20, "Helvetica");
+  print(bestPerformance.toString(), 40, canvasHeight - (this.height), canvasHeight - (this.height), "black", 20, "Helvetica");
+
   if (window.localStorage.getItem('score0') != null) {
     for (i = 0; i < bestScores.length; i++) {
       bestScores[i] = window.localStorage.getItem('bestscores' + i);
     }
-    print(bestScores.toString(), 40, canvasHeight - (this.height) + 25, canvasHeight - (this.height), "black", 20, "Helvetica");
-  }*/
-  
+    print(bestPerformance.toString(), 40, canvasHeight - (this.height), canvasHeight - (this.height), "black", 20, "Helvetica");
+  }
+  */
 }
 
 cardImage.draw = function(){
